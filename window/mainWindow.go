@@ -20,5 +20,7 @@ func MainWindows(app fyne.App) {
 
 // 设置主体内容
 func content(mainWindow fyne.Window) {
-	mainWindow.SetContent(widget.NewLabel("测试"))
+	lables := widget.NewLabel("测试")
+
+	mainWindow.SetContent(lables)
 }
