@@ -22,16 +22,12 @@ func MainWindows(app fyne.App) {
 
 // 设置主体内容
 func content(mainWindow fyne.Window) {
-	//text1 := canvas.NewText("111111111111", color.Black)
-	//text2 := canvas.NewText("222222222222", color.Black)
-	//text3 := canvas.NewText("333333333333", color.Black)
-	//grid := container.NewHBox(text1, text2, text3)
-	leftMenu(mainWindow)
+	leftTabMenu(mainWindow)
 	//mainWindow.SetContent(grid)
 }
 
 // 左侧目录
-func leftMenu(mainWindow fyne.Window) {
+func leftTabMenu(mainWindow fyne.Window) {
 	// 翻译
 	translateImg := canvas.NewImageFromFile(common.TranslateImage)
 	translateImg.FillMode = canvas.ImageFillOriginal
