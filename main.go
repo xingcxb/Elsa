@@ -1,6 +1,7 @@
 package main
 
 import (
+	"Elsa/common"
 	"Elsa/window"
 	"fyne.io/fyne/v2/app"
 )
@@ -15,7 +16,8 @@ func init() {
 }
 
 func main() {
-	a := app.New()
+	// 创建一个新的应用，并且设置一个全局唯一的id
+	a := app.NewWithID(common.AppId)
 	window.MainWindows(a)
 	//_ = os.Unsetenv("FYNE_FONT")
 }
