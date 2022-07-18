@@ -1,8 +1,8 @@
 package main
 
 import (
+	"Elsa/window"
 	"fyne.io/fyne/v2/app"
-	"tools/window"
 )
 
 func init() {
