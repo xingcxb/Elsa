@@ -32,16 +32,19 @@ func (t *aTray) MakeTray(a fyne.App) {
 		selectMenu := fyne.NewMenuItem("Select Translate", func() {
 			fmt.Println("测试...")
 			// 测试发送系统通知
-			fyne.CurrentApp().SendNotification(&fyne.Notification{
-				Title:   "11111",
-				Content: "22222",
-			})
+			//fyne.CurrentApp().SendNotification(&fyne.Notification{
+			//	Title:   "11111",
+			//	Content: "22222",
+			//})
+			// 将数据写入到剪切板中
+			_ = kit.ClipboardKit().WriteSelectionByClipboard("test")
 		})
 		// 设置划词翻译的快捷键
 		selectMenu.Shortcut = &desktop.CustomShortcut{
 			KeyName:  fyne.KeyD,
 			Modifier: fyne.KeyModifierAlt,
 		}
+
 		// 截图翻译
 		screenshotsMenu := fyne.NewMenuItem("Screenshots Translate", func() {})
 		// 输入翻译
