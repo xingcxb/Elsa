@@ -17,7 +17,10 @@ func MainWindows(app fyne.App) {
 	// 设置主体内容
 	content(mainWindow)
 	// 窗口的显示和运行
-	mainWindow.ShowAndRun()
+	//mainWindow.ShowAndRun()
+	app.Lifecycle()
+	// 运行不展示窗口
+	app.Run()
 }
 
 // 设置主体内容
