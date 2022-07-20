@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/driver/desktop"
+	"github.com/go-vgo/robotgo"
 	"net/url"
 )
 
@@ -36,7 +37,11 @@ func (t *aTray) MakeTray(a fyne.App) {
 			//	Title:   "11111",
 			//	Content: "22222",
 			//})
+			// 获取鼠标位置
+			x, y := robotgo.GetMousePos()
+			fmt.Println("x:", x, "y:", y)
 			// 执行鼠标双击，将数据进行选中
+			// 执行赋值操作
 			err := kit.RobotKit().Copy()
 			if err != nil {
 				fmt.Println(err)
