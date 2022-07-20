@@ -36,8 +36,14 @@ func (t *aTray) MakeTray(a fyne.App) {
 			//	Title:   "11111",
 			//	Content: "22222",
 			//})
+			// 执行鼠标双击，将数据进行选中
+			err := kit.RobotKit().Copy()
+			if err != nil {
+				fmt.Println(err)
+				return
+			}
 			// 将数据写入到剪切板中
-			_ = kit.ClipboardKit().WriteSelectionByClipboard("test")
+			//_ = kit.RobotKit().WriteSelectionByClipboard("test")
 		})
 		// 设置划词翻译的快捷键
 		selectMenu.Shortcut = &desktop.CustomShortcut{
